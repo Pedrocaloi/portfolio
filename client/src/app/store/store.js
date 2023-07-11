@@ -30,12 +30,12 @@ const sessionConfig = {
  whitelist: [], // especifica aquí los reductores que quieres persistir en Session Storage
 };
 
-const localStorageReducer = persistReducer(
- localStorageConfig,
- combineReducers({
-  lang: lang,
- }),
-);
+// const localStorageReducer = persistReducer(
+//  localStorageConfig,
+//  combineReducers({
+//   lang: lang,
+//  }),
+// );
 
 const sessionReducer = persistReducer(sessionConfig, combineReducers({}));
 
