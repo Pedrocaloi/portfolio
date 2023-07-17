@@ -38,8 +38,13 @@ const Contact = () => {
          name='message'
          rows='10'
          placeholder='Enter your message'
-         className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none resize-none'
-         style={{ width: '100%', height: '20em' }}
+         className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'
+         style={{
+          width: '100%',
+          height: '20em',
+          resize: 'none', // Evita el redimensionamiento vertical y horizontal
+          overflow: 'auto', // Agrega una barra de desplazamiento si el contenido excede el tamaño del textarea
+         }}
         />
         <button className='text-white bg-gradient-to-r from-violet-900 to-orange-700 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>
          Submit
@@ -83,7 +88,14 @@ const Contact = () => {
          name='message'
          rows='10'
          placeholder='Ingresa tu mensaje'
-         className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'></textarea>
+         className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none'
+         style={{
+          width: '100%',
+          height: '20em',
+          resize: 'none', // Evita el redimensionamiento vertical y horizontal
+          overflow: 'auto', // Agrega una barra de desplazamiento si el contenido excede el tamaño del textarea
+         }}
+        />
         <button className='text-white bg-gradient-to-r from-violet-900 to-orange-700 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>
          Enviar
         </button>
