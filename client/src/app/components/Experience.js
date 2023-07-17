@@ -8,12 +8,12 @@ import reactImage from '../assets/react.png';
 import postgresql from '../assets/postgresql.png';
 import tailwind from '../assets/tailwind.png';
 import github from '../assets/github.png';
-import materialUi from '../assets/material-ui.svg';
-import typescript from '../assets/typescritpt.svg';
+import materialUi from '../assets/materialUi.svg';
+import typescript from '../assets/typescript.svg';
 import nestjs from '../assets/nestjs.svg';
 import nextjs from '../assets/nextjs.svg';
 import mongoDb from '../assets/mongodb.svg';
-import googleApi from '../assets/google-cloud.svg';
+import googleApi from '../assets/googleCloud.svg';
 import { useSelector } from 'react-redux';
 
 const Experience = () => {
