@@ -8,6 +8,12 @@ import reactImage from '../assets/react.png';
 import postgresql from '../assets/postgresql.png';
 import tailwind from '../assets/tailwind.png';
 import github from '../assets/github.png';
+import materialUi from '../assets/material-ui.svg';
+import typescript from '../assets/typescritpt.svg';
+import nestjs from '../assets/nestjs.svg';
+import nextjs from '../assets/nextjs.svg';
+import mongoDb from '../assets/mongodb.svg';
+import googleApi from '../assets/google-cloud.svg';
 import { useSelector } from 'react-redux';
 
 const Experience = () => {
@@ -36,7 +42,7 @@ const Experience = () => {
    id: 4,
    src: reactImage,
    title: 'React.js',
-   style: 'shadow-sky-600',
+   style: 'shadow-sky-400',
   },
   {
    id: 5,
@@ -48,7 +54,13 @@ const Experience = () => {
    id: 6,
    src: express,
    title: 'Express.js',
-   style: 'shadow-gray-300',
+   style: 'shadow-gray-600',
+  },
+  {
+   id: 13,
+   src: nextjs,
+   title: 'Next.js',
+   style: 'shadow-gray-500',
   },
   {
    id: 7,
@@ -60,13 +72,43 @@ const Experience = () => {
    id: 8,
    src: tailwind,
    title: 'Tailwind',
-   style: 'shadow-sky-400',
+   style: 'shadow-sky-300',
   },
   {
    id: 9,
    src: github,
    title: 'GitHub',
    style: 'shadow-gray-200',
+  },
+  {
+   id: 10,
+   src: materialUi,
+   title: 'Material Ui',
+   style: 'shadow-sky-400',
+  },
+  {
+   id: 11,
+   src: typescript,
+   title: 'Typescript',
+   style: 'shadow-blue-600',
+  },
+  {
+   id: 12,
+   src: nestjs,
+   title: 'Nest.js',
+   style: 'shadow-red-500',
+  },
+  {
+   id: 14,
+   src: mongoDb,
+   title: 'MongoDB',
+   style: 'shadow-orange-400',
+  },
+  {
+   id: 15,
+   src: googleApi,
+   title: 'Google API',
+   style: 'shadow-yellow-400',
   },
  ];
 
@@ -75,7 +117,7 @@ const Experience = () => {
    {lang === 'english' ? (
     <div
      name='experience'
-     className=' bg-gradient-to-b from-gray-800 to-black w-full md:h-screen'>
+     className=' bg-gradient-to-b from-gray-800 to-black w-full md:h-max p-5 pt-24'>
      <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white'>
       <div>
        <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline'>
@@ -105,7 +147,7 @@ const Experience = () => {
     // Spanish
     <div
      name='experience'
-     className=' bg-gradient-to-b from-gray-800 to-black w-full md:h-screen'>
+     className=' bg-gradient-to-b from-gray-800 to-black w-full md:h-max p-5 pt-24'>
      <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white'>
       <div>
        <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline'>

@@ -13,10 +13,10 @@ const About = () => {
      <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
       <div className='pb-8'>
        <p className='text-4xl font-bold inline border-b-4 border-gray-500'>
-        About
+        About me
        </p>
       </div>
-      <p className='text-xl mt-20'>
+      <p className='text-xl mt-10'>
        I am a Full Stack Developer from Tucumán, Argentina. Graduated from Henry
        Bootcamp. Attentive, friendly and very predisposed to teamwork and great
        adaptability. I have experience in organization and conflict resolution.
@@ -41,11 +41,11 @@ const About = () => {
         Sobre mí
        </p>
       </div>
-      <p className='text-xl mt-20'>
+      <p className='text-xl mt-10'>
        Soy un programador Full Stack de Tucumán, Argentina. Graduado del
        bootcamp de programación de SoyHenry. Atento, amistoso y muy predispuesto
        al trabajo en equipo, con gran adaptabilidad. Tengo experiencia en la
-       organizacion y resolucion de problemas
+       organizacion y resolucion de problemas.
       </p>
       <br />
       <p className='text-xl'>
@@ -53,7 +53,7 @@ const About = () => {
        resolver alguna parte del codigo, basicamente no descanso hasta
        arreglarlo. Empecé en la programación al principio de 2022 y desde
        entonces no he parado de estudiar y añadir conocimientos y experiencia a
-       mi stack de tecnologías
+       mi stack de tecnologías.
       </p>
      </div>
     </div>
