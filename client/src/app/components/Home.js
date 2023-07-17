@@ -11,16 +11,16 @@ const Home = () => {
    {lang === 'english' ? (
     <div
      name='home'
-     className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800'>
+     className='h-screen pt-80 pb-10 w-full bg-gradient-to-b from-black via-black to-gray-800'>
      <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-1 md:flex-row'>
-      <div className='flex flex-col justify-center h-full w-full'>
+      <div className='flex flex-col justify-center h-full w-full text-center'>
        <h2 className='text-4xl sm:text-6xl font-bold text-white'>
         I'm a Full Stack Developer
        </h2>
-       <p className='text-gray-500 py-4 max-w-md'>
+       <h6 className='text-gray-500 py-4 max-w-md '>
         I'm a graduated from Henry Bootcamp. I love to work on web application
         using technologies like React, Tailwind, NodeJS and PostgreSQL.
-       </p>
+       </h6>
        <div className='mx-auto'>
         <Link
          to='portfolio'
@@ -50,17 +50,17 @@ const Home = () => {
     // Spanish
     <div
      name='home'
-     className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800'>
+     className='h-screen pt-80 pb-10 w-full bg-gradient-to-b from-black via-black to-gray-800'>
      <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-1 md:flex-row'>
-      <div className='flex flex-col justify-center h-full w-full'>
+      <div className='flex flex-col justify-center h-full w-full text-center'>
        <h2 className='text-4xl sm:text-6xl font-bold text-white'>
         Soy un programador Full Stack
        </h2>
-       <p className='text-gray-500 py-4 max-w-md'>
+       <h6 className='text-gray-500 py-4 max-w-md text-center'>
         Me gradué del Bootcamp de programación de SoyHenry. Me encanta trabajar
         en aplicaciones web usando tecnologias como React, Tailwind, NodeJS y
         PostgreSQL entre otras.
-       </p>
+       </h6>
        <div className='mx-auto'>
         <Link
          to='portfolio'

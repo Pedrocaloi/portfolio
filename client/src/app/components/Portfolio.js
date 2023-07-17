@@ -65,7 +65,7 @@ const Portfolio = () => {
           <img
            src={src}
            alt=''
-           className='rounded-md duration-200 h-44 hover:scale-105'
+           className='rounded-md duration-200 h-44 w-full hover:scale-105'
           />
           <div className='flex items-center justify-center'>
            <a
@@ -116,7 +116,7 @@ const Portfolio = () => {
           <img
            src={src}
            alt=''
-           className='rounded-md duration-200 h-44 hover:scale-105'
+           className='rounded-md duration-200 h-44 w-full hover:scale-105'
           />
           <div className='flex items-center justify-center'>
            <a
