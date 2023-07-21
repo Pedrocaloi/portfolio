@@ -88,7 +88,7 @@ function NavBar() {
      </ul>
      <div
       onClick={() => setNav(!nav)}
-      className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden'>
+      className='cursor-pointer pr-4 z-10 text-gray-400 transition duration-150 hover:text-gray-600 md:hidden'>
       {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
      </div>
 
@@ -228,7 +228,7 @@ function NavBar() {
      </ul>
      <div
       onClick={() => setNav(!nav)}
-      className='cursor-pointer pr-4 z-10 text-gray-500 md:hidden'>
+      className='cursor-pointer pr-4 z-10 text-gray-400 transition duration-150 hover:text-gray-600 md:hidden'>
       {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
      </div>
 

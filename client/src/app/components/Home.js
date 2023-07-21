@@ -19,7 +19,8 @@ const Home = () => {
        </h2>
        <h6 className='text-gray-500 py-4 max-w-md '>
         I'm a graduated from Henry Bootcamp. I love to work on web application
-        using technologies like React, Tailwind, NodeJS and PostgreSQL.
+        using technologies like React, Tailwind, MaterialUI, NodeJS with
+        Express.js or Nest.js and PostgreSQL.
        </h6>
        <div className='mx-auto'>
         <Link
@@ -58,8 +59,8 @@ const Home = () => {
        </h2>
        <h6 className='text-gray-500 py-4 max-w-md text-center'>
         Me gradué del Bootcamp de programación de SoyHenry. Me encanta trabajar
-        en aplicaciones web usando tecnologias como React, Tailwind, NodeJS y
-        PostgreSQL entre otras.
+        en aplicaciones web usando tecnologias como React, Tailwind, MaterialUI,
+        NodeJS en junto con Express.js o Nest.js y PostgreSQL entre otras.
        </h6>
        <div className='mx-auto'>
         <Link

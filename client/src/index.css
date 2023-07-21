@@ -7,7 +7,49 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: 'Raleway', sans-serif;
-  }
+ html {
+  font-family: 'Raleway', sans-serif;
+ }
+}
+
+.bg-fadeIn {
+ animation: fadeIn 0.5s ease-in forwards;
+ animation-iteration-count: 1;
+}
+
+.bg-fadeOut {
+ animation: fadeOut 0.5s ease-in forwards;
+ animation-iteration-count: 1;
+}
+
+.modal-scaleIn {
+ animation: scaleIn 0.3s ease-in forwards;
+ animation-iteration-count: 1;
+}
+
+.modal-scaleOut {
+ animation: scaleOut 0.3s ease-in forwards;
+ animation-iteration-count: 1;
+}
+
+@keyframes modal-content-scaleIn {
+ 0% {
+  opacity: 0;
+  transform: scale(0.9);
+ }
+ 100% {
+  opacity: 1;
+  transform: scale(1);
+ }
+}
+
+@keyframes modal-content-scaleOut {
+ 0% {
+  opacity: 1;
+  transform: scale(1);
+ }
+ 100% {
+  opacity: 0;
+  transform: scale(0.9);
+ }
 }

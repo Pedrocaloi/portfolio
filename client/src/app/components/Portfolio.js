@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { FaTimes } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
+
 import NutriU from '../assets/portfolio/Screenshot_1.png';
 import Videogames from '../assets/portfolio/Screenshot_2.png';
 import RifasMX from '../assets/portfolio/Screenshot_4.png';
 import Pixie from '../assets/portfolio/Screenshot_5.png';
-import { useSelector } from 'react-redux';
 
 const Portfolio = () => {
  const { lang } = useSelector((state) => state.lang);
+ const [modalInfo, setModalInfo] = useState(null);
+ const [modalOpen, setModalOpen] = useState(false); // Estado para controlar si el modal está abierto o cerrado
 
  const portfolios = [
   {
@@ -27,7 +31,7 @@ const Portfolio = () => {
    id: 3,
    name: 'RifasMX',
    src: RifasMX,
-   demo: '',
+   demo: 'https://rifas-mx.vercel.app',
    code: 'https://github.com/Pedrocaloi/RifasMX',
   },
   {
@@ -39,12 +43,79 @@ const Portfolio = () => {
   },
  ];
 
+ useEffect(() => {
+  if (modalInfo) {
+   document.documentElement.classList.add('overflow-hidden');
+  } else {
+   document.documentElement.classList.remove('overflow-hidden');
+  }
+ }, [modalInfo]);
+
+ const handleCardDetail = (id) => {
+  const project = portfolios.find((item) => item.id === id);
+  setModalInfo(project);
+  setModalOpen(true); // Abrir el modal al hacer clic en una tarjeta
+ };
+
+ const handleCloseModal = () => {
+  // Agregar clase para la animación de cierre del modal-content
+  document
+   .querySelector('.modal-content')
+   .classList.add('modal-content-scaleOut');
+  // Agregar clase para la animación de cierre del modal-container
+  document.querySelector('.modal-container').classList.add('modal-scaleOut');
+
+  setTimeout(() => {
+   setModalOpen(false);
+   setModalInfo(null);
+   // Remover las clases de animación después de 300ms (misma duración que la transición CSS)
+   document
+    .querySelector('.modal-content')
+    .classList.remove('modal-content-scaleOut');
+   document
+    .querySelector('.modal-container')
+    .classList.remove('modal-scaleOut');
+  }, 300);
+ };
+
+ //  no anda niaca esto
+
  return (
   <>
    {lang === 'english' ? (
     <div
      name='portfolio'
      className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-max'>
+     {modalInfo && (
+      <div
+       className={`modal-container fixed inset-0 z-50 flex items-center justify-center ${
+        modalOpen ? 'modal-scaleIn' : 'modal-scaleOut'
+       }`}>
+       <div
+        className={`modal-bg-container fixed inset-0 bg-gray-800 bg-opacity-75 ${
+         modalOpen ? 'bg-fadeIn ' : 'bg-fadeOut'
+        }`}
+        onClick={handleCloseModal}
+       />
+       <div className='modal-content inline-block align-middle bg-gray-900 rounded-lg text-left w-full h-full md:w-5/6 md:h-5/6 mx-auto md:my-4 lg:my-8 xl:my-12 overflow-hidden shadow-lx transform transition-all duration-200'>
+        <div className='modal-wrapper px-10 pt-10 '>
+         <div className='modal-wrapper-flex flex flex-col'>
+          <button
+           className='ml-auto mb-5 text-gray-400 transition duration-150 hover:text-gray-600'
+           onClick={handleCloseModal}>
+           <FaTimes
+            size={30}
+            style={{ cursor: 'pointer' }}
+           />
+          </button>
+          <div className='modal-content '>
+           <h1>{modalInfo.name}</h1>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     )}
      <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
       <div className='pb-8'>
        <p className='text-4xl font-bold inline border-b-4 border-gray-500'>
@@ -57,15 +128,14 @@ const Portfolio = () => {
       </div>
       <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
        {portfolios.map(({ id, src, demo, code, name }) => (
-        <div>
+        <div key={id}>
          <h5 className='text-gray-400 py-4 max-w-md text-center'>{name}</h5>
-         <div
-          key={id}
-          className='shadow-md shadow-gray-600 rounded-lg '>
+         <div className='shadow-md shadow-gray-600 rounded-lg '>
           <img
+           onClick={() => handleCardDetail(id)}
            src={src}
            alt=''
-           className='rounded-md duration-200 h-44 w-full hover:scale-105'
+           className='rounded-md duration-200 h-44 w-full hover:scale-105 hover:cursor-pointer'
           />
           <div className='flex items-center justify-center'>
            <a
@@ -96,6 +166,36 @@ const Portfolio = () => {
     <div
      name='portfolio'
      className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-max'>
+     {modalInfo && (
+      <div
+       className={`modal-container fixed inset-0 z-50 flex items-center justify-center ${
+        modalOpen ? 'modal-scaleIn' : 'modal-scaleOut'
+       }`}>
+       <div
+        className={`modal-bg-container fixed inset-0 bg-gray-800 bg-opacity-75 ${
+         modalOpen ? 'bg-fadeIn ' : 'bg-fadeOut'
+        }`}
+        onClick={handleCloseModal}
+       />
+       <div className='modal-content inline-block align-middle bg-gray-900 rounded-lg text-left w-full h-full md:w-5/6 md:h-5/6 mx-auto md:my-4 lg:my-8 xl:my-12 overflow-hidden shadow-lx transform transition-all duration-200'>
+        <div className='modal-wrapper px-10 pt-10 '>
+         <div className='modal-wrapper-flex flex flex-col'>
+          <button
+           className='ml-auto mb-5 text-gray-400 transition duration-150 hover:text-gray-600'
+           onClick={handleCloseModal}>
+           <FaTimes
+            size={30}
+            style={{ cursor: 'pointer' }}
+           />
+          </button>
+          <div className='modal-content '>
+           <h1>{modalInfo.name}</h1>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     )}
      <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
       <div className='pb-8'>
        <p className='text-4xl font-bold inline border-b-4 border-gray-500'>
@@ -108,15 +208,14 @@ const Portfolio = () => {
       </div>
       <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
        {portfolios.map(({ id, src, demo, code, name }) => (
-        <div>
+        <div key={id}>
          <h5 className='text-gray-400 py-4 max-w-md text-center'>{name}</h5>
-         <div
-          key={id}
-          className='shadow-md shadow-gray-600 rounded-lg'>
+         <div className='shadow-md shadow-gray-600 rounded-lg'>
           <img
+           onClick={() => handleCardDetail(id)}
            src={src}
            alt=''
-           className='rounded-md duration-200 h-44 w-full hover:scale-105'
+           className='rounded-md duration-200 h-44 w-full hover:scale-105 hover:cursor-pointer'
           />
           <div className='flex items-center justify-center'>
            <a
