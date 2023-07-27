@@ -128,9 +128,11 @@ const Portfolio = () => {
         Click on the images to see more information about any of the projects!
        </p>
       </div>
-      <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
+      <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 justify-center'>
        {portfolio.map(({ id, src, demo, code, name }) => (
-        <div key={id}>
+        <div
+         key={id}
+         className='max-w-md'>
          <h5 className='text-gray-400 py-4 max-w-md text-center'>{name}</h5>
          <div className='shadow-md shadow-gray-600 rounded-lg '>
           <img
@@ -246,9 +248,11 @@ const Portfolio = () => {
         proyectos!
        </p>
       </div>
-      <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
+      <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 justify-center'>
        {portfolio.map(({ id, src, demo, code, name }) => (
-        <div key={id}>
+        <div
+         key={id}
+         className='max-w-md'>
          <h5 className='text-gray-400 py-4 max-w-md text-center'>{name}</h5>
          <div className='shadow-md shadow-gray-600 rounded-lg'>
           <img
