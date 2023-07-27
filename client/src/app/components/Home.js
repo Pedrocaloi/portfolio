@@ -17,7 +17,7 @@ const Home = () => {
        <h2 className='text-4xl sm:text-6xl font-bold text-white'>
         I'm a Full Stack Developer
        </h2>
-       <h6 className='text-gray-500 py-4 max-w-md '>
+       <h6 className='text-gray-500 py-4 px-4 max-w text-center'>
         I'm a graduated from Henry Bootcamp. I love to work on web application
         using technologies like React, Tailwind, MaterialUI, NodeJS with
         Express.js or Nest.js and PostgreSQL.
@@ -57,7 +57,7 @@ const Home = () => {
        <h2 className='text-4xl sm:text-6xl font-bold text-white'>
         Soy un programador Full Stack
        </h2>
-       <h6 className='text-gray-500 py-4 max-w-md text-center'>
+       <h6 className='text-gray-500 py-4 px-4 max-w text-center'>
         Me gradué del Bootcamp de programación de SoyHenry. Me encanta trabajar
         en aplicaciones web usando tecnologias como React, Tailwind, MaterialUI,
         NodeJS en junto con Express.js o Nest.js y PostgreSQL entre otras.
@@ -67,7 +67,7 @@ const Home = () => {
          to='portfolio'
          smooth
          duration={500}
-         className='group text-white w-fit px-6 py-4 my-2 flex items-center rounded-md bg-gradient-to-r from-violet-900 to-orange-700 cursor-pointer'>
+         className='group text-white w-fit px-6 py-4 my-10 flex items-center rounded-md bg-gradient-to-r from-violet-900 to-orange-700 cursor-pointer'>
          Portafolio
          <span className='group-hover:rotate-90 duration-300'>
           <MdOutlineKeyboardArrowRight
