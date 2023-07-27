@@ -106,7 +106,7 @@ const Portfolio = () => {
              ))}
             </Slider>
            </div>
-           <p className='mt-10 mb-10 text-justify text-2xl'>
+           <p className='mt-10 mb-10 text-justify text-base'>
             {modalInfo.descriptionEng}
            </p>
           </div>
@@ -223,7 +223,7 @@ const Portfolio = () => {
              ))}
             </Slider>
            </div>
-           <p className='mt-10 mb-10 text-justify text-2xl'>
+           <p className='mt-10 mb-10 text-justify text-base'>
             {modalInfo.descriptionEsp}
            </p>
           </div>
